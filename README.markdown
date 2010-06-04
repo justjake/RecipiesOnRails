@@ -1,5 +1,5 @@
 = Recipes on Rails
-
+by [Jake Teton-Landis](http://jake.teton-landis.org)
 A simple recipe database application, coming soon.
 ==Goals & features
 

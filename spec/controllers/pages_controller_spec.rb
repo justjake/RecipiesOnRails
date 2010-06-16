@@ -38,5 +38,17 @@ describe PagesController do
       response.should have_tag("title", "Recipes on Rails | About")
     end
   end 
+   
+  describe "GET 'help'" do
+    it "should be sucessful" do
+      get 'help'
+      response.should be_success
+    end
     
+    it "shpuld have the right title" do
+      get 'help' 
+      response.should have_tag("title", "Recipes on Rails | Help")
+    end
+  end 
+ 
 end

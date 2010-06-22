@@ -1,0 +1,23 @@
+<ul class="navigation">
+	<li><%= link_to "Home", root_path %></li>
+	<li><%= link_to "About", about_path %></li>
+	<li><%= link_to "Contact", contact_path %></li>
+	<li><%= link_to "Help", help_path %></li>
+</ul>
+
+<ul class="navigation">
+<%=
+	t = 0.0
+	s = ''
+	navlist = %w{Home About Contact Help}
+	r = navlist.map { |s| s.length }
+	r.each { |n| t += n }
+	r.map! { |n| { :dest => navlist.shift, :width => n/t*100 } }
+	r.each do |v|
+		s += "<li style=\"width: #{v[:width]}%;\">" # + link_to v[:dest] 
+		s += v[:dest] # I need to find a way to make 'contact_path' dynamically
+		s += "</li>\n"
+	end
+	s
+%>
+</ul>

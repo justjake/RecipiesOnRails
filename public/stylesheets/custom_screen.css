@@ -1,0 +1,39 @@
+/*
+	Recipes on Rails
+	Screen
+	Custom Stylesheet
+*/
+
+.breadcrumb {
+	display: inline;
+	list-style: none;
+	clear: both;
+	margin: 0;
+	padding: 0;
+	
+}
+	.breadcrumb li {
+		display: inline;
+		text-transform: capitalize; 
+/*		letter-spacing: -1px;
+		font-size: .9em;
+		font-family: verdana;
+*/	}
+	.breadcrumb li:before {
+		content: '|';
+		color: #000;
+	}
+	
+	.breadcrumb li:first-child:before {
+		content: '';
+	}
+.navigation {
+	list-style: none;
+	padding: 0;
+	display: table;
+	width: 100%;
+}
+	.navigation li {
+		display: table-cell;
+		text-align: center;
+	}

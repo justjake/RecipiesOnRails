@@ -9,8 +9,20 @@
 		<%= render 'layouts/stylesheets' %>
 	</head>
 	<body>
-		<div class="container">
-			<%= yield %>
+		<div class="container" style="width: 100%; max-width: 950px;">
+			
+			<div class="header">
+				<h2>
+					<%= appName %> | <%= crumb({:li => "alt", :a => "alt"}) %>
+					<!-- <%= if @title then ' | <span class="alt">'+@title+"</span>" end %> -->
+				</h2>
+				<%= render 'layouts/navigation' %>
+				<hr>
+			</div>
+			
+			<div class="content">
+				<%= yield %>
+			</div>
 		</div>
 	</body>
 	
